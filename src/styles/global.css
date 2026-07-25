@@ -1,0 +1,58 @@
+:root {
+  --bg: #15171a;
+  --surface: #1e2126;
+  --surface-raised: #262a30;
+  --border: #34383f;
+  --text: #edede8;
+  --text-muted: #8b8f94;
+  --amber: #f2a93b;
+  --amber-dim: #7a5a22;
+  --steel: #5b8aa6;
+  --ok: #4caf7d;
+  --alert: #e05a4e;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Números tabulares para conteos: alineados como en una cinta de báscula/medición */
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
